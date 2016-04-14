@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1">
+    <!--<test name="DriverInstance" >
+        <classes>
+            <class name="com.morningstar.Definition.StepDefinitionHandler" />
+        </classes>
+    </test>-->
+  <test name="IDAMembership">
+        <classes>
+            <class name="com.morningstar.Definition.IDAMembership"/>
+        </classes>
+    </test>
+    <test name="TIIRecordSearch" >
+        <classes>
+            <class name="com.morningstar.Definition.TIIRecordSearch" />
+        </classes>
+    </test>
+</suite>
+
+        <!-- TO Run On Pakage (All classes in pakage)
+        <test name="Regression1"   >
+        <packages>
+            <package name="test.sample" />
+        </packages>
+
+
+         -->

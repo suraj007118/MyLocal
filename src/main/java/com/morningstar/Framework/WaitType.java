@@ -1,0 +1,11 @@
+package com.morningstar.Framework;
+
+/**
+ * Created by Sanit Thale on 3/28/2016 11:26 AM.
+ */
+public enum WaitType {
+    WAITFORELEMENTTOBECLICKABLE,WAITFORELEMENTTOBEEENABLED,WAITFORELEMENTTOBEDISPLAYED,WAITFORELEMENTTOBEPRESENT
+
+}
+
+
