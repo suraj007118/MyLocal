@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="18.058" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="idea.version" value="2016.1.1"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\bin"/>
+    <property name="java.vm.version" value="24.80-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="idea.launcher.port" value="7533"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\skelkar\Selenium\MSTR_TestNG_Maven"/>
+    <property name="java.runtime.version" value="1.7.0_80-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\skelkar\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_80\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Enterprise Vault\EVClient;JAVA_HOME\bin;C:\Users\skelkar\apache-maven-3.3.9\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\skelkar"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="idea.launcher.bin.path" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\bin"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="SKelkar"/>
+    <property name="java.class.path" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.4.jar;C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_80\jre"/>
+    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=2016.1.1 test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_80"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testing001" classname="com.morningstar.Definition.TestScenario001" time="5.057">
+    <failure message="Failed To Click On Continue Btn on GoogleHomePage page" type="com.morningstar.Exceptions.UnsucessfulServiceException">com.morningstar.Exceptions.UnsucessfulServiceException: Failed To Click On Continue Btn on GoogleHomePage page
+	at com.morningstar.Definition.TestScenario001.testing001(TestScenario001.java:46)
+Caused by: com.morningstar.Exceptions.ElementNotLoadedInSpecifiedTimeException: Element Continue Btn was not loaded in specified timeout of 5 seconds kindly refer attached screenshot for more clearification
+	at com.morningstar.Definition.TestScenario001.testing001(TestScenario001.java:46)
+Caused by: org.openqa.selenium.TimeoutException: 
+Timed out after 5 seconds waiting for com.morningstar.Framework.WebDriverService$3@3235541d
+Build info: version: '2.47.0', revision: '0e4837e94b1fad0db93e88cd972ed3e235a22892', time: '2015-07-29 15:58:41'
+System info: host: 'IN-6CJQ6C2', ip: '10.90.14.89', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_80'
+Session ID: 0cfe561f-c6ce-4903-910e-eed82ab05fb0
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=42.0}]
+	at com.morningstar.Definition.TestScenario001.testing001(TestScenario001.java:46)
+</failure>
+  </testcase>
+</testsuite>

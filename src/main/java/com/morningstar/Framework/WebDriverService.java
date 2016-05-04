@@ -1,6 +1,9 @@
 package com.morningstar.Framework;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -31,17 +34,23 @@ public class WebDriverService {
         try {
             switch (browser) {
                 case "Firefox":
-                    capabilities = DesiredCapabilities.firefox();
+                 //   capabilities = DesiredCapabilities.firefox();
+                    driver = new FirefoxDriver();
                     break;
                 case "chrome":
-                    capabilities = DesiredCapabilities.chrome();
+                 //   capabilities = DesiredCapabilities.chrome();
+                    System.setProperty("webdriver.chrome.driver","C:\\Users\\skelkar\\Selenium\\driverpath\\chromedriver.exe");
+                    driver = new ChromeDriver();
                     break;
                 case "ie":
-                    capabilities = DesiredCapabilities.internetExplorer();
+                //    capabilities = DesiredCapabilities.internetExplorer();
+                    System.setProperty("webdriver.chrome.driver","C:\\Users\\skelkar\\Selenium\\driverpath\\IEDriverServer.exe");
+                    driver = new InternetExplorerDriver();
                     break;
             }
-            this.driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-        } catch (MalformedURLException e) {
+         //   this.driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+        }// catch (MalformedURLException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -5,14 +5,19 @@ import com.morningstar.Exceptions.UnsucessfulServiceException;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.util.ArrayList;
+
+import static org.testng.AssertJUnit.fail;
 
 /**
  * Created by Sanit Thale on 3/28/2016 11:20 AM.
  */
 public class Page {
+    private StringBuffer verificationErrors = new StringBuffer();
     protected WebDriver driver;
     protected Logger logger;
     protected String className;
@@ -27,6 +32,8 @@ public class Page {
         this.frameworkServices = new FrameworkServices();
         this.webDriverWrapper = new WebDriverService(driver);
     }
+
+
 
     private WebElement waitForElementAndReturnElement(PageElement pageElement) {
 
@@ -99,9 +106,10 @@ public class Page {
         }
 
     }
+
     protected void clickAction(PageElement pageElement) {
         try {
-            action=new Actions(this.driver);
+            action = new Actions(this.driver);
             action.click(getWebElement(pageElement)).build().perform();
             frameworkServices.logMessage(
                     "Clicked on " + pageElement.getElementName() + " on "
@@ -410,6 +418,7 @@ public class Page {
         driver.switchTo().window(newTab.get(1));
         WebDriverService.wait(5);
     }
+
     public void switchFrame(PageElement pageElement, String frameName) {
         try {
             //String capture =pageElement.getWebElement().getText();
@@ -430,4 +439,83 @@ public class Page {
         }
     }
 
+    public void verifyTrue(boolean condition, String message) {
+        try {
+            Assert.assertTrue(condition, message);
+            frameworkServices.logMessage("Verifying condition is to be TRUE"
+                    + " on " + className
+                    + " page", logger);
+        } catch (AssertionError e) {
+            frameworkServices.logMessage("Failed to verify condition is to be TRUE"
+                    + " on " + className
+                    + " page With Exception : " + e, logger);
+        }
+    }
+
+    public void verifyFalse(boolean condition, String message) {
+        try {
+            Assert.assertFalse(condition, message);
+            frameworkServices.logMessage("Verifying condition is to be FALSE "
+                    + " on " + className
+                    + " page", logger);
+        } catch (AssertionError e) {
+            frameworkServices.logMessage("Failed to verify condition is to be FALSE"
+                    + " on " + className
+                    + " page With Exception : " + e, logger);
+        }
+    }
+
+    public void verifyNotEquals(Object expected, Object actual, String message) {
+        try {
+            Assert.assertNotEquals(expected, actual, message);
+            frameworkServices.logMessage("Verifying values are not to be equal: "
+                    + " on " + className
+                    + " page ", logger);
+        } catch (AssertionError e) {
+            frameworkServices.logErrorMessage("Failed to verify values are not to be equal: "
+                    + " on " + className
+                    + " page With Exception : " + e, logger);
+        }
+    }
+
+    public void verifyEquals(Object actual, Object expected, String message) {
+        try {
+            Assert.assertEquals(actual, expected, message);
+            frameworkServices.logMessage("Verifying values are to be equal: "
+                    + " on " + className
+                    + " page ", logger);
+        } catch (Error  e) {
+            verificationErrors.append(e.toString());
+            verificationErrors.append(System.lineSeparator());
+            frameworkServices.logErrorMessage("Failed to verify values are to be equal: "
+                    + " on " + className
+                    + " page With Exception : " + e, logger);
+        }
+    }
+    public void getAll(){
+        String verificationErrorString = verificationErrors.toString();
+        if (!"".equals(verificationErrorString)) {
+            fail(verificationErrorString);
+        }
+    }
+
+
+    public void highlightElement(PageElement pageElement) {
+        for (int i = 0; i < 3; i++) {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].setAttribute('style', arguments[1]);", getWebElement(pageElement), "color: green; border: 2px solid black;");
+            try {
+                Thread.sleep(300);
+            }  catch (InterruptedException e) {
+            }
+            js.executeScript("arguments[0].setAttribute('style', arguments[1]);", getWebElement(pageElement), "");
+            try {
+                Thread.sleep(300);
+            }  catch (InterruptedException e) {
+            }
+        }
+    }
+
+
 }
+

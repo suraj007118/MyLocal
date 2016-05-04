@@ -17,4 +17,6 @@ public class UnsucessfulServiceException extends RuntimeException {
         super(message, cause);
     }
 
+       public void PageNotLoadedError(){
+    }
 }

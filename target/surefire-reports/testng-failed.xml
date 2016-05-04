@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite1]" parallel="tests">
+  <test name="MISTest">
+    <classes>
+      <class name="com.morningstar.Definition.TestScenario001"/>
+    </classes>
+  </test> <!-- MISTest -->
+  <test name="MISTest(failed)" parallel="tests">
+    <classes>
+      <class name="com.morningstar.Definition.TestScenario001">
+        <methods>
+          <include name="end"/>
+          <include name="testing001"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.morningstar.Definition.TestScenario001 -->
+    </classes>
+  </test> <!-- MISTest(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

@@ -11,7 +11,7 @@ public class FrameworkServices {
 
     public void logMessage(String message, Logger logger) {
         logger.info(message);
-        System.out.print(message);
+        //System.out.print(message);
     }
 
     public void logErrorMessage(String message, Logger logger) {
